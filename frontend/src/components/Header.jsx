@@ -43,7 +43,16 @@ const Header = ({ onMenuClick }) => {
           <span>·</span>
           <span className="font-mono">{formatTime(currentTime)}</span>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 md:gap-3.5">
+          <a
+            href="/resume.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs md:text-[13px] text-muted hover:text-foreground transition-colors font-medium"
+          >
+            Resume
+          </a>
+          <span className="text-muted/40 text-xs">·</span>
           <button
             onClick={toggleTheme}
             className="p-1.5 text-muted hover:text-foreground transition-colors rounded-full hover:bg-accent"
@@ -51,6 +60,7 @@ const Header = ({ onMenuClick }) => {
           >
             {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </button>
+          <span className="text-muted/40 text-xs">·</span>
           <button
             onClick={onMenuClick}
             className="flex items-center gap-2 text-xs md:text-[13px] text-muted hover:text-foreground transition-colors"
