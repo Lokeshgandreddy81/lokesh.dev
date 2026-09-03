@@ -7,6 +7,7 @@ import InterestsSection from '../components/InterestsSection';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
 import SideMenu from '../components/SideMenu';
+import ScrollGuideBird from '../components/decorative/ScrollGuideBird';
 
 const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -15,6 +16,7 @@ const Home = () => {
     <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
       <Header onMenuClick={() => setMenuOpen(true)} />
       <SideMenu isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
+      <ScrollGuideBird />
       <main>
         <Hero />
         <WorkSection />

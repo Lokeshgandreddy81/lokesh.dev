@@ -1,6 +1,7 @@
 import React from 'react';
 import { Mail, Linkedin, Github, ExternalLink } from 'lucide-react';
 import siteConfig from '../config/siteConfig';
+import FallingLeavesAnimation from './decorative/FallingLeavesAnimation';
 
 const ContactSection = () => {
   return (
@@ -80,9 +81,10 @@ const ContactSection = () => {
             </div>
           </div>
 
-          {/* Right Side - Full-Height Portrait Image */}
+          {/* Right Side - Full-Height Portrait Image with Falling Leaves Animation */}
           <div
-            className="hidden lg:block relative min-h-screen"
+            id="contact-shoulder-target"
+            className="hidden lg:block relative min-h-screen overflow-hidden"
             style={{
               backgroundImage: `url(https://customer-assets.emergentagent.com/job_daniel-autry/artifacts/2c2yfqzx_PHOTO-2026-01-14-14-18-00.jpg)`,
               backgroundSize: 'cover',
@@ -91,8 +93,21 @@ const ContactSection = () => {
               filter: 'grayscale(100%)'
             }}
           >
-            {/* Optional overlay for better text contrast if needed */}
-            <div className="absolute inset-0 bg-black/5"></div>
+            {/* Subtle Overlay */}
+            <div className="absolute inset-0 bg-black/20"></div>
+
+            {/* Exact Shoulder Landing Anchor for Guide Bird */}
+            <div
+              id="contact-shoulder-perch"
+              className="absolute pointer-events-none w-2 h-2"
+              style={{
+                left: '40.2%',
+                top: '48.4%',
+              }}
+            />
+
+            {/* Falling Leaves Vector Animation */}
+            <FallingLeavesAnimation />
           </div>
         </div>
       </div>

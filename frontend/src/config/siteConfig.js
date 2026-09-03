@@ -5,7 +5,7 @@ export const siteConfig = {
   // ===== PERSONAL INFORMATION =====
   name: "Gandreddy Lokesh",
   firstName: "Lokesh",
-  location: "Tirupati, India",
+  location: "Hyderabad, India",
   timezone: "ist",
   tagline: "I architect intelligent systems that think, automate, and scale. This is where ideas become infrastructure.",
   
@@ -15,10 +15,10 @@ export const siteConfig = {
   closingImage: "https://customer-assets.emergentagent.com/job_daniel-autry/artifacts/vpfro1p6_WhatsApp%20Image%202026-01-13%20at%2019.29.21.jpeg",
   
   // ===== CONTACT & SOCIAL LINKS =====
-  email: "gandreddylokesh7@gmail.com",
+  email: "lokeshgandreddy81@gmail.com",
   phone: "+91 6300272531",
   linkedIn: "https://linkedin.com/in/lokeshh-hhh",
-  github: "https://github.com/Lokeshgandr",
+  github: "https://github.com/Lokeshgandreddy81?tab=repositories",
   portfolio: "https://lokesh-ai-portfolio.vercel.app",
   blog: "https://lokeshgandreddy.hashnode.dev",
   devto: "https://dev.to/lokeshgandreddy",
@@ -26,23 +26,25 @@ export const siteConfig = {
   // ===== WORK EXPERIENCES =====
   workExperiences: [
     {
-      id: "saraai",
-      company: "Sara.ai",
-      logo: "S",
-      title: "Right now, I'm building Sara.ai — an AI-native learning platform that adapts in real time to how people learn.",
-      descriptions: [
-        "Founder & Backend Engineer. Built an AI-powered learning platform serving 1,700+ users, owning backend architecture, APIs, and database design.",
-        "Implemented a retrieval-based content system using vector search (FAISS) and deployed scalable services using FastAPI, PostgreSQL, Docker, and AWS."
-      ],
-      link: "https://sara.ai"
+      id: "cortex",
+      company: "Cortex",
+      logo: "C",
+      index: "01",
+      category: "FEATURED PLATFORM",
+      title: "Right now, I'm building Cortex — an AI-native learning platform.",
+      description: "Founder & Lead Backend Engineer — architecting real-time adaptive engines, vector retrieval systems, and scalable cloud infrastructure.",
+      link: "https://vidyalaya-eight.vercel.app"
     },
     {
-      id: "vaagisha",
-      company: "Vaagisha Enterprises",
-      logo: "VE",
-      title: "Previously, I designed enterprise AI systems that transform how companies hire, collaborate, and make decisions.",
-      description: "AI Engineering Consultant. Built backend and application logic using Next.js and serverless APIs to streamline recruiter workflows. Contributed to an AI-assisted hiring platform.",
-      link: "#vaagisha"
+      id: "hirecircle",
+      company: "HireCircle",
+      logo: "HC",
+      index: "02",
+      category: "AI HIRING PLATFORM",
+      title: "I architected HireCircle — a mobile-first platform streamlining talent discovery and AI-assisted hiring workflows.",
+      description: "Founder & Full-Stack AI Engineer — built the mobile app in React Native/Expo, real-time backend with Node.js & Express, and smart interview workflows connecting job seekers with employers.",
+      tags: ["React Native", "Expo", "Node.js", "AI Interviews", "Express", "AWS"],
+      link: "https://github.com/Lokeshgandreddy81/HireCircle"
     }
   ],
   
@@ -57,26 +59,6 @@ export const siteConfig = {
       description: "I believe the most elegant systems are invisible. They don't demand attention; they enable momentum."
     },
     {
-      title: "I built an open-source framework for multi-agent automation",
-      description: "Because I believe the future of work is collaborative — between humans and AI, not one replacing the other. It's a toolkit for orchestrating intelligence.",
-      hasLink: true,
-      link: "https://github.com/Lokeshgandr"
-    },
-    {
-      title: "I guide engineers transitioning into AI systems roles",
-      description: "The hardest part isn't the algorithm — it's the discipline of building something that won't break at 3 a.m.",
-      hasLink: true,
-      link: "https://lokeshgandreddy.hashnode.dev"
-    },
-    {
-      title: "Beyond AI systems, I'm drawn to tools that amplify human creativity",
-      description: "Open-source as a form of technical citizenship. Education that adapts, not just instructs. Architecture that lasts longer than trends. This is where engineering meets ethos."
-    },
-    {
-      title: "I'm designing an autonomous business engine",
-      description: "A system that observes, decides, and acts within complex workflows. Think of it as a co-pilot for operations, not automation for automation's sake."
-    },
-    {
       title: "Outside the terminal, I'm a student of systems thinking",
       description: "In code, in teams, in how ideas spread. I write to clarify my own thinking, speak to sharpen it, and listen to broaden it."
     },
@@ -89,15 +71,23 @@ export const siteConfig = {
   // ===== INTERESTS =====
   interests: {
     building: ["Prototypes that become products", "Tools that become standards", "Systems that scale gracefully"],
-    reading: ["Systems design papers", "Founder memoirs", "Architecture that inspires"],
-    learning: ["Long-form interviews with builders", "Ambient soundscapes for deep work", "AI/ML research breakthroughs"]
+    reading: [
+      "AI agent architectures, loops & graph capabilities",
+      "Anthropic hackathon projects & emerging use cases",
+      "System-level debugging & production-grade code"
+    ],
+    learning: [
+      "Long-form interviews with builders",
+      "Exploring & cloning open-source projects to build upon",
+      "Learning from creators experimenting with AI tools"
+    ]
   },
   
   // ===== FOOTER =====
   footer: {
     text: "This site, like everything I build, is crafted, not assembled. Explore the code on",
     linkText: "my GitHub.",
-    copyright: "Copyright © 2024 Gandreddy Lokesh. Built with intention, deployed with purpose."
+    copyright: `Copyright © ${new Date().getFullYear()} Gandreddy Lokesh. Built with intention, deployed with purpose.`
   }
 };
 

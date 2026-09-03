@@ -20,22 +20,59 @@ code {
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-/* Dark Mode (Default) */
-:root.dark {
-    --background: #0a0a0a;
+/* ── Sleek, Ultra-Smooth Custom Scrollbar ── */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(160, 160, 160, 0.25);
+    border-radius: 9999px;
+    transition: background 0.3s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(168, 85, 247, 0.5);
+}
+
+/* ── Smooth Focus, Tap & Selection ── */
+::selection {
+    background: rgba(168, 85, 247, 0.25);
+    color: inherit;
+}
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+#emergent-badge, [id*="emergent-badge"], [id*="emergent"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Dark Mode (Default Pure Black) */
+:root, :root.dark {
+    --background: #000000;
     --foreground: #e8e8e8;
-    --muted: #999;
-    --border: #222;
-    --accent: #1a1a1a;
+    --muted: #999999;
+    --border: #222222;
+    --accent: #111111;
 }
 
 /* Light Mode */
 :root.light {
-    --background: #fafafa;
+    --background: #ffffff;
     --foreground: #1a1a1a;
-    --muted: #666;
+    --muted: #666666;
     --border: #e0e0e0;
     --accent: #f5f5f5;
 }
@@ -43,7 +80,7 @@ html {
 html, body {
     background-color: var(--background);
     color: var(--foreground);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .bg-background {
