@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Gandreddy Lokesh - Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gandreddy Lokesh — Resume</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.ico">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Lora:ital,wght@0,600;0,700;1,400&display=swap');
 
@@ -13,15 +15,26 @@
     }
 
     body {
-      width: 860px;
-      margin: 0 auto;
-      padding: 28px 36px 28px 36px;
-      background: #ffffff;
+      background: #f1f5f9;
       color: #0f172a;
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-      font-size: 11.5px;
-      line-height: 1.38;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 32px 16px 80px 16px;
       -webkit-font-smoothing: antialiased;
+    }
+
+    /* Outer Wrapper to preserve clean A4 aspect ratio */
+    .resume-wrapper {
+      width: 100%;
+      max-width: 860px;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.12), 0 0 0 1px rgba(15, 23, 42, 0.06);
+      padding: 36px 44px 34px 44px;
+      position: relative;
     }
 
     a {
@@ -32,77 +45,79 @@
     /* HEADER */
     .header {
       text-align: center;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
     }
 
     .name {
       font-family: 'Lora', Georgia, serif;
-      font-size: 24px;
+      font-size: 26px;
       font-weight: 700;
       color: #00467f;
       letter-spacing: 0.6px;
-      margin-bottom: 4px;
+      margin-bottom: 5px;
     }
 
     .contact-bar {
-      font-size: 11px;
+      font-size: 11.5px;
       color: #334155;
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       font-weight: 500;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
     }
 
     .contact-bar a {
       color: #00467f;
       text-decoration: none;
       white-space: nowrap;
+      transition: color 0.15s;
     }
 
     .contact-bar a:hover {
       text-decoration: underline;
+      color: #0284c7;
     }
 
     .sep {
       color: #94a3b8;
-      font-size: 10px;
+      font-size: 11px;
     }
 
     /* SECTIONS */
     .section {
-      margin-bottom: 7px;
+      margin-bottom: 9px;
     }
 
     .section-title {
-      font-size: 12.5px;
+      font-size: 13px;
       font-weight: 800;
       color: #00467f;
       text-transform: uppercase;
       letter-spacing: 0.8px;
-      padding-bottom: 2px;
-      border-bottom: 1.5px solid #00467f;
-      margin-bottom: 4px;
+      padding-bottom: 2.5px;
+      border-bottom: 1.6px solid #00467f;
+      margin-bottom: 5px;
     }
 
     .summary-text {
       text-align: justify;
-      font-size: 11.2px;
-      line-height: 1.42;
+      font-size: 11.6px;
+      line-height: 1.44;
       color: #1e293b;
     }
 
     /* EDUCATION */
     .edu-item {
-      margin-bottom: 3px;
+      margin-bottom: 4px;
     }
 
     .row-split {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      font-size: 11.5px;
+      font-size: 12px;
     }
 
     .row-split .inst-title {
@@ -111,7 +126,7 @@
     }
 
     .row-split .date-range {
-      font-size: 11px;
+      font-size: 11.5px;
       font-style: italic;
       color: #475569;
     }
@@ -120,8 +135,9 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      font-size: 11px;
+      font-size: 11.4px;
       color: #334155;
+      margin-top: 1px;
     }
 
     .score-badge {
@@ -132,11 +148,11 @@
     /* SKILLS TABLE */
     .skills-grid {
       display: grid;
-      grid-template-columns: 125px 1fr;
-      row-gap: 2.2px;
-      column-gap: 10px;
-      font-size: 11.2px;
-      line-height: 1.34;
+      grid-template-columns: 135px 1fr;
+      row-gap: 2.8px;
+      column-gap: 12px;
+      font-size: 11.6px;
+      line-height: 1.36;
       align-items: baseline;
     }
 
@@ -152,7 +168,7 @@
 
     /* PROJECTS */
     .project-card {
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
 
     .project-header {
@@ -163,13 +179,13 @@
     }
 
     .project-name {
-      font-size: 12px;
+      font-size: 12.5px;
       font-weight: 700;
       color: #0f172a;
     }
 
     .project-links {
-      font-size: 10.8px;
+      font-size: 11px;
       font-weight: 600;
       color: #00467f;
     }
@@ -179,11 +195,15 @@
       text-decoration: underline;
     }
 
+    .project-links a:hover {
+      color: #0284c7;
+    }
+
     .project-stack {
-      font-size: 10.8px;
+      font-size: 11px;
       font-style: italic;
       color: #475569;
-      margin-bottom: 2.5px;
+      margin-bottom: 3px;
     }
 
     ul.bullets {
@@ -193,10 +213,10 @@
 
     ul.bullets li {
       position: relative;
-      padding-left: 13px;
-      font-size: 11px;
-      line-height: 1.36;
-      margin-bottom: 2px;
+      padding-left: 14px;
+      font-size: 11.3px;
+      line-height: 1.38;
+      margin-bottom: 2.5px;
       color: #1e293b;
       text-align: justify;
     }
@@ -206,7 +226,7 @@
       position: absolute;
       left: 2px;
       color: #00467f;
-      font-size: 12px;
+      font-size: 13px;
       line-height: 1.1;
     }
 
@@ -214,154 +234,270 @@
       font-weight: 700;
       color: #000000;
     }
+
+    /* ================= FLOATING ACTION BUTTONS (BOTTOM RIGHT CORNER) ================= */
+    .fixed-actions {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 1000;
+      filter: drop-shadow(0 10px 20px rgba(0, 70, 127, 0.25));
+    }
+
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: 9999px;
+      font-size: 13.5px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      border: none;
+      font-family: inherit;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #00467f 0%, #0369a1 100%);
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(0, 70, 127, 0.35);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 8px 22px rgba(0, 70, 127, 0.45);
+      background: linear-gradient(135deg, #003663 0%, #0284c7 100%);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0) scale(0.98);
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+      color: #00467f;
+      padding: 12px 14px;
+      border: 1px solid #cbd5e1;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    .btn-secondary:hover {
+      background: #f8fafc;
+      transform: translateY(-2px);
+      border-color: #94a3b8;
+    }
+
+    /* PRINT STYLES */
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+      .resume-wrapper {
+        box-shadow: none;
+        max-width: 100%;
+        padding: 0;
+      }
+      .fixed-actions {
+        display: none !important;
+      }
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 12px 8px 90px 8px;
+      }
+      .resume-wrapper {
+        padding: 24px 18px;
+      }
+      .skills-grid {
+        grid-template-columns: 1fr;
+        row-gap: 4px;
+      }
+      .fixed-actions {
+        bottom: 18px;
+        right: 18px;
+      }
+      .btn-action {
+        padding: 10px 16px;
+        font-size: 12.5px;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <!-- HEADER -->
-  <div class="header">
-    <div class="name">GANDREDDY LOKESH</div>
-    <div class="contact-bar">
-      <a href="tel:+916300272531">+91 63002 72531</a>
-      <span class="sep">|</span>
-      <a href="mailto:lokeshgandreddy81@gmail.com">lokeshgandreddy81@gmail.com</a>
-      <span class="sep">|</span>
-      <a href="https://linkedin.com/in/lokeshh-hhh" target="_blank">linkedin.com/in/lokeshh-hhh</a>
-      <span class="sep">|</span>
-      <a href="https://github.com/Lokeshgandreddy81" target="_blank">github.com/Lokeshgandreddy81</a>
-      <span class="sep">|</span>
-      <a href="https://vidyalaya-eight.vercel.app" target="_blank">vidyalaya-eight.vercel.app</a>
-    </div>
-  </div>
-
-  <!-- SUMMARY -->
-  <div class="section">
-    <div class="section-title">Summary</div>
-    <p class="summary-text">
-      Full-Stack &amp; Backend Engineer (B.Tech CSE '26, CGPA 8.75/10) with hands-on experience architecting production-grade AI applications and distributed microservices using <strong>Node.js, Express.js, TypeScript, Python, MongoDB Atlas, and Docker</strong>. Proven track record designing end-to-end RAG pipelines, low-latency streaming APIs (SSE), and scalable authentication systems. Targeting backend/SWE roles focused on distributed systems, clean API design, and cloud deployments.
-    </p>
-  </div>
-
-  <!-- EDUCATION -->
-  <div class="section">
-    <div class="section-title">Education</div>
-    <div class="edu-item">
-      <div class="row-split">
-        <span class="inst-title">B.Tech in Computer Science Engineering</span>
-        <span class="date-range">2022 – 2026</span>
-      </div>
-      <div class="sub-row">
-        <span>Mohan Babu University, Tirupati, Andhra Pradesh</span>
-        <span class="score-badge">CGPA: 8.75 / 10.0</span>
+  <div class="resume-wrapper">
+    <!-- HEADER -->
+    <div class="header">
+      <div class="name">GANDREDDY LOKESH</div>
+      <div class="contact-bar">
+        <a href="tel:+916300272531">+91 63002 72531</a>
+        <span class="sep">|</span>
+        <a href="mailto:lokeshgandreddy81@gmail.com">lokeshgandreddy81@gmail.com</a>
+        <span class="sep">|</span>
+        <a href="https://linkedin.com/in/lokeshh-hhh" target="_blank" rel="noopener noreferrer">linkedin.com/in/lokeshh-hhh</a>
+        <span class="sep">|</span>
+        <a href="https://github.com/Lokeshgandreddy81" target="_blank" rel="noopener noreferrer">github.com/Lokeshgandreddy81</a>
+        <span class="sep">|</span>
+        <a href="https://vidyalaya-eight.vercel.app" target="_blank" rel="noopener noreferrer">vidyalaya-eight.vercel.app</a>
       </div>
     </div>
-    <div class="edu-item" style="margin-top: 2px;">
-      <div class="row-split">
-        <span class="inst-title">Intermediate – MPC</span>
-        <span class="date-range">2020 – 2022</span>
+
+    <!-- SUMMARY -->
+    <div class="section">
+      <div class="section-title">Summary</div>
+      <p class="summary-text">
+        Full-Stack &amp; Backend Engineer (B.Tech CSE '26, CGPA 8.75/10) with hands-on experience architecting production-grade AI applications and distributed microservices using <strong>Node.js, Express.js, TypeScript, Python, MongoDB Atlas, and Docker</strong>. Proven track record designing end-to-end RAG pipelines, low-latency streaming APIs (SSE), and scalable authentication systems. Targeting backend/SWE roles focused on distributed systems, clean API design, and cloud deployments.
+      </p>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="section">
+      <div class="section-title">Education</div>
+      <div class="edu-item">
+        <div class="row-split">
+          <span class="inst-title">B.Tech in Computer Science Engineering</span>
+          <span class="date-range">2022 – 2026</span>
+        </div>
+        <div class="sub-row">
+          <span>Mohan Babu University, Tirupati, Andhra Pradesh</span>
+          <span class="score-badge">CGPA: 8.75 / 10.0</span>
+        </div>
       </div>
-      <div class="sub-row">
-        <span>Narayana Junior College, Visakhapatnam</span>
-        <span class="score-badge">88.9%</span>
+      <div class="edu-item" style="margin-top: 3px;">
+        <div class="row-split">
+          <span class="inst-title">Intermediate – MPC</span>
+          <span class="date-range">2020 – 2022</span>
+        </div>
+        <div class="sub-row">
+          <span>Narayana Junior College, Visakhapatnam</span>
+          <span class="score-badge">88.9%</span>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- TECHNICAL SKILLS -->
-  <div class="section">
-    <div class="section-title">Technical Skills</div>
-    <div class="skills-grid">
-      <div class="skill-cat">Languages</div>
-      <div class="skill-list">TypeScript, JavaScript (ES6+), Python, Java, SQL, HTML5, CSS3</div>
+    <!-- TECHNICAL SKILLS -->
+    <div class="section">
+      <div class="section-title">Technical Skills</div>
+      <div class="skills-grid">
+        <div class="skill-cat">Languages</div>
+        <div class="skill-list">TypeScript, JavaScript (ES6+), Python, Java, SQL, HTML5, CSS3</div>
 
-      <div class="skill-cat">Backend</div>
-      <div class="skill-list">Node.js, Express.js, FastAPI, RESTful APIs, Server-Sent Events (SSE), WebSockets</div>
+        <div class="skill-cat">Backend</div>
+        <div class="skill-list">Node.js, Express.js, FastAPI, RESTful APIs, Server-Sent Events (SSE), WebSockets</div>
 
-      <div class="skill-cat">Frontend</div>
-      <div class="skill-list">React 19, Vite, Tailwind CSS, Framer Motion, Radix UI</div>
+        <div class="skill-cat">Frontend</div>
+        <div class="skill-list">React 19, Vite, Tailwind CSS, Framer Motion, Radix UI</div>
 
-      <div class="skill-cat">Databases</div>
-      <div class="skill-list">MongoDB Atlas (MQL, Mongoose ODM), Vector Search, Redis, PostgreSQL, SQLite</div>
+        <div class="skill-cat">Databases</div>
+        <div class="skill-list">MongoDB Atlas (MQL, Mongoose ODM), Vector Search, Redis, PostgreSQL, SQLite</div>
 
-      <div class="skill-cat">AI &amp; Systems</div>
-      <div class="skill-list">RAG (Retrieval-Augmented Generation), Gemini GenAI SDK, Vector Embeddings</div>
+        <div class="skill-cat">AI &amp; Systems</div>
+        <div class="skill-list">RAG (Retrieval-Augmented Generation), Gemini GenAI SDK, Vector Embeddings</div>
 
-      <div class="skill-cat">DevOps &amp; Cloud</div>
-      <div class="skill-list">Docker, Render, Vercel, GitHub Actions (CI/CD), AWS (EC2, S3)</div>
+        <div class="skill-cat">DevOps &amp; Cloud</div>
+        <div class="skill-list">Docker, Render, Vercel, GitHub Actions (CI/CD), AWS (EC2, S3)</div>
 
-      <div class="skill-cat">Concepts</div>
-      <div class="skill-list">System Design, Data Structures &amp; Algorithms, OOP Principles, JWT Authentication</div>
+        <div class="skill-cat">Concepts</div>
+        <div class="skill-list">System Design, Data Structures &amp; Algorithms, OOP Principles, JWT Authentication</div>
 
-      <div class="skill-cat">Tools</div>
-      <div class="skill-list">Git, GitHub, Postman, VS Code, Antigravity</div>
-    </div>
-  </div>
-
-  <!-- PROJECTS -->
-  <div class="section">
-    <div class="section-title">Projects</div>
-
-    <!-- Cortex -->
-    <div class="project-card">
-      <div class="project-header">
-        <span class="project-name">Cortex – Autonomous AI Learning Ecosystem</span>
-        <span class="project-links">
-          <a href="https://vidyalaya-eight.vercel.app" target="_blank">Live Demo</a> &sdot;
-          <a href="https://github.com/Lokeshgandreddy81/Vidhyalaya" target="_blank">Source</a>
-        </span>
+        <div class="skill-cat">Tools</div>
+        <div class="skill-list">Git, GitHub, Postman, VS Code, Antigravity</div>
       </div>
-      <div class="project-stack">React 19 &sdot; TypeScript &sdot; Node.js &sdot; Express &sdot; MongoDB Atlas &sdot; Gemini AI &sdot; Docker &sdot; Vercel &sdot; Render</div>
-      <ul class="bullets">
-        <li>Architected an adaptive orchestration engine converting unstructured documents into hierarchical academic roadmaps and interactive neural concept maps using <strong>Google Gemini 2.5/Flash</strong>.</li>
-        <li>Built an end-to-end <strong>RAG (Retrieval-Augmented Generation) pipeline</strong> leveraging in-process PDF chunking and <strong>3072-dimensional vector embeddings</strong> with MongoDB Vector Search for high-accuracy curriculum grounding.</li>
-        <li>Engineered an asynchronous streaming architecture (<strong>Server-Sent Events</strong>) for low-latency interactive AI tutoring, supporting active recall, dynamic code sandboxes (7 languages), and concept visualization.</li>
-        <li>Implemented robust multi-tenant authentication featuring role-based access control (<strong>RBAC</strong>) for university admins/students, automated session recovery, and 1-click ephemeral sandbox isolation.</li>
-        <li>Containerized microservices using <strong>Docker</strong> deployed on Render, orchestrated SPA delivery via Vercel with automatic rewrites, and enforced strict type safety (<strong>zero TypeScript warnings</strong>).</li>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="section">
+      <div class="section-title">Projects</div>
+
+      <!-- Cortex -->
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-name">Cortex – Autonomous AI Learning Ecosystem</span>
+          <span class="project-links">
+            <a href="https://vidyalaya-eight.vercel.app" target="_blank" rel="noopener noreferrer">Live Demo</a> &sdot;
+            <a href="https://github.com/Lokeshgandreddy81/Vidhyalaya" target="_blank" rel="noopener noreferrer">Source</a>
+          </span>
+        </div>
+        <div class="project-stack">React 19 &sdot; TypeScript &sdot; Node.js &sdot; Express &sdot; MongoDB Atlas &sdot; Gemini AI &sdot; Docker &sdot; Vercel &sdot; Render</div>
+        <ul class="bullets">
+          <li>Architected an adaptive orchestration engine converting unstructured documents into hierarchical academic roadmaps and interactive neural concept maps using <strong>Google Gemini 2.5/Flash</strong>.</li>
+          <li>Built an end-to-end <strong>RAG (Retrieval-Augmented Generation) pipeline</strong> leveraging in-process PDF chunking and <strong>3072-dimensional vector embeddings</strong> with MongoDB Vector Search for high-accuracy curriculum grounding.</li>
+          <li>Engineered an asynchronous streaming architecture (<strong>Server-Sent Events</strong>) for low-latency interactive AI tutoring, supporting active recall, dynamic code sandboxes (7 languages), and concept visualization.</li>
+          <li>Implemented robust multi-tenant authentication featuring role-based access control (<strong>RBAC</strong>) for university admins/students, automated session recovery, and 1-click ephemeral sandbox isolation.</li>
+          <li>Containerized microservices using <strong>Docker</strong> deployed on Render, orchestrated SPA delivery via Vercel with automatic rewrites, and enforced strict type safety (<strong>zero TypeScript warnings</strong>).</li>
+        </ul>
+      </div>
+
+      <!-- HireCircle -->
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-name">HireCircle – AI-Powered Blue-Collar Hiring Platform</span>
+          <span class="project-links">
+            <a href="https://github.com/Lokeshgandreddy81/HireCircle" target="_blank" rel="noopener noreferrer">Source</a>
+          </span>
+        </div>
+        <div class="project-stack">React 19 &sdot; TypeScript &sdot; Vite &sdot; Tailwind CSS &sdot; Gemini GenAI SDK &sdot; MediaDevices API</div>
+        <ul class="bullets">
+          <li>Built a mobile-first hiring platform with dual-role authentication (Job Seeker / Employer), supporting phone and email login flows with role-specific theming across <strong>3,100+ lines of TypeScript</strong>.</li>
+          <li>Integrated <strong>Google Gemini 3 (Pro &amp; Flash)</strong> via the GenAI SDK for AI-powered video interviews that extract structured profiles (skills, experience, qualifications) using <strong>JSON schema-constrained generation</strong>.</li>
+          <li>Engineered a <strong>5-module tab architecture</strong> (Connect feed, Profiles, Applications, Jobs, Settings) with stack-based navigation, full-screen chat interfaces, and AI-generated smart reply suggestions.</li>
+          <li>Implemented a social hiring layer (Connect tab) featuring community feeds with voice/photo posts, a <strong>karma-based vouch system</strong>, industry Circles with rate boards, an Academy with video courses, and referral Bounties.</li>
+          <li>Designed real-time application tracking with a <strong>6-stage pipeline</strong> (Applied &rarr; Viewed &rarr; Shortlisted &rarr; Interview &rarr; Offer &rarr; Rejected) and AI-powered candidate-job match scoring with Gemini-generated explanations.</li>
+        </ul>
+      </div>
+
+      <!-- CalcVerse -->
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-name">CalcVerse – All-in-One Modular Calculator Platform</span>
+          <span class="project-links">
+            <a href="https://calcverse.onrender.com" target="_blank" rel="noopener noreferrer">Live Demo</a> &sdot;
+            <a href="https://github.com/Lokeshgandreddy81/Vidhyalaya" target="_blank" rel="noopener noreferrer">Source</a>
+          </span>
+        </div>
+        <div class="project-stack">Node.js &sdot; Express.js &sdot; REST API &sdot; Docker &sdot; Render</div>
+        <ul class="bullets">
+          <li>Engineered a modular backend using <strong>Node.js/Express</strong> with 15+ REST endpoints, achieving <strong>200ms avg response time</strong> and <strong>35% latency reduction</strong> via request optimization and response caching.</li>
+          <li>Designed a <strong>plugin-style computation engine</strong> decoupling each calculation module for independent scaling, unit testing, and maintenance.</li>
+          <li>Wrote comprehensive test suites for edge cases and boundary conditions; containerized with <strong>Docker</strong> and deployed on Render with environment-based configuration management.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ACHIEVEMENTS -->
+    <div class="section" style="margin-bottom: 0;">
+      <div class="section-title">Achievements, DSA &amp; Impact</div>
+      <ul class="bullets" style="margin-top: 3px;">
+        <li><strong>Data Structures &amp; Algorithms:</strong> Solved <strong>150+ LeetCode problems</strong> across Arrays, Hash Maps, Binary Search, Two Pointers, Stacks, Queues, Sliding Window; applied Big-O time-space complexity optimization.</li>
       </ul>
     </div>
-
-    <!-- HireCircle -->
-    <div class="project-card">
-      <div class="project-header">
-        <span class="project-name">HireCircle – AI-Powered Blue-Collar Hiring Platform</span>
-        <span class="project-links">
-          <a href="https://github.com/Lokeshgandreddy81/HireCircle" target="_blank">Source</a>
-        </span>
-      </div>
-      <div class="project-stack">React 19 &sdot; TypeScript &sdot; Vite &sdot; Tailwind CSS &sdot; Gemini GenAI SDK &sdot; MediaDevices API</div>
-      <ul class="bullets">
-        <li>Built a mobile-first hiring platform with dual-role authentication (Job Seeker / Employer), supporting phone and email login flows with role-specific theming across <strong>3,100+ lines of TypeScript</strong>.</li>
-        <li>Integrated <strong>Google Gemini 3 (Pro &amp; Flash)</strong> via the GenAI SDK for AI-powered video interviews that extract structured profiles (skills, experience, qualifications) using <strong>JSON schema-constrained generation</strong>.</li>
-        <li>Engineered a <strong>5-module tab architecture</strong> (Connect feed, Profiles, Applications, Jobs, Settings) with stack-based navigation, full-screen chat interfaces, and AI-generated smart reply suggestions.</li>
-        <li>Implemented a social hiring layer (Connect tab) featuring community feeds with voice/photo posts, a <strong>karma-based vouch system</strong>, industry Circles with rate boards, an Academy with video courses, and referral Bounties.</li>
-        <li>Designed real-time application tracking with a <strong>6-stage pipeline</strong> (Applied &rarr; Viewed &rarr; Shortlisted &rarr; Interview &rarr; Offer &rarr; Rejected) and AI-powered candidate-job match scoring with Gemini-generated explanations.</li>
-      </ul>
-    </div>
-
-    <!-- CalcVerse -->
-    <div class="project-card">
-      <div class="project-header">
-        <span class="project-name">CalcVerse – All-in-One Modular Calculator Platform</span>
-        <span class="project-links">
-          <a href="https://calcverse.onrender.com" target="_blank">Live Demo</a> &sdot;
-          <a href="https://github.com/Lokeshgandreddy81/Vidhyalaya" target="_blank">Source</a>
-        </span>
-      </div>
-      <div class="project-stack">Node.js &sdot; Express.js &sdot; REST API &sdot; Docker &sdot; Render</div>
-      <ul class="bullets">
-        <li>Engineered a modular backend using <strong>Node.js/Express</strong> with 15+ REST endpoints, achieving <strong>200ms avg response time</strong> and <strong>35% latency reduction</strong> via request optimization and response caching.</li>
-        <li>Designed a <strong>plugin-style computation engine</strong> decoupling each calculation module for independent scaling, unit testing, and maintenance.</li>
-        <li>Wrote comprehensive test suites for edge cases and boundary conditions; containerized with <strong>Docker</strong> and deployed on Render with environment-based configuration management.</li>
-      </ul>
-    </div>
   </div>
 
-  <!-- ACHIEVEMENTS -->
-  <div class="section" style="margin-bottom: 0;">
-    <div class="section-title">Achievements, DSA &amp; Impact</div>
-    <ul class="bullets" style="margin-top: 2px;">
-      <li><strong>Data Structures &amp; Algorithms:</strong> Solved <strong>150+ LeetCode problems</strong> across Arrays, Hash Maps, Binary Search, Two Pointers, Stacks, Queues, Sliding Window; applied Big-O time-space complexity optimization.</li>
-    </ul>
+  <!-- FLOATING ACTION BUTTONS (BOTTOM RIGHT CORNER) -->
+  <div class="fixed-actions">
+    <button onclick="window.print()" class="btn-action btn-secondary" title="Print Resume">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 6 2 18 2 18 9"></polyline>
+        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+        <rect x="6" y="14" width="12" height="8"></rect>
+      </svg>
+      <span>Print</span>
+    </button>
+    <a href="/Lokesh_Resume.pdf" download="Gandreddy_Lokesh_Resume.pdf" class="btn-action btn-primary" title="Download official PDF Resume">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+        <polyline points="7 10 12 15 17 10"></polyline>
+        <line x1="12" y1="15" x2="12" y2="3"></line>
+      </svg>
+      <span>Download Resume</span>
+    </a>
   </div>
 
 </body>

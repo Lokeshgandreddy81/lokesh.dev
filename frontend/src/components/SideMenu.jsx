@@ -5,7 +5,7 @@ const SideMenu = ({ isOpen, onClose }) => {
   const mainMenuItems = [
     { label: 'Home', href: '#home' },
     { label: "Let's work together", href: '#contact' },
-    { label: 'Resume', href: '/images/Lokesh_Resume.png', external: true }
+    { label: 'Resume', href: '/resume.html', external: true }
   ];
   
   const workMenuItems = [
