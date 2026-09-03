@@ -1,6 +1,6 @@
 # Gandreddy Lokesh
 
-+91 63002 72531 | lokeshgandreddy81@gmail.com | linkedin.com/in/lokeshh-hhh | github.com/Lokeshgandreddy81 | vidyalaya-eight.vercel.app
++91 63002 72531 | lokeshgandreddy81@gmail.com | linkedin.com/in/lokeshh-hhh | github.com/Lokeshgandreddy81 | lokeshram.vercel.app
 
 ## SUMMARY
 

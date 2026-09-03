@@ -19,7 +19,7 @@ export const siteConfig = {
   phone: "+91 6300272531",
   linkedIn: "https://linkedin.com/in/lokeshh-hhh",
   github: "https://github.com/Lokeshgandreddy81?tab=repositories",
-  portfolio: "https://lokesh-ai-portfolio.vercel.app",
+  portfolio: "https://lokeshram.vercel.app",
   blog: "https://lokeshgandreddy.hashnode.dev",
   devto: "https://dev.to/lokeshgandreddy",
   
