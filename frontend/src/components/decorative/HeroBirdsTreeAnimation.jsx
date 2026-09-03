@@ -4,143 +4,94 @@ const HeroBirdsTreeAnimation = ({ className = "", cowSurprised = false }) => {
   return (
     <div className={`relative select-none pointer-events-none flex items-end justify-center ${className}`}>
       <style>{`
-        /* ================= BIRD 1: MAIN SCOUT (LANDS ON RIGHT BRANCH) ================= */
+        /* ================= BIRD 1: MAIN SCOUT (CONTINUOUS FLUID FLIGHT) ================= */
         @keyframes bird1Flight {
           0% {
-            transform: translate(-40px, 30px) rotate(18deg);
+            transform: translate(-50px, 40px) rotate(16deg);
             opacity: 0;
           }
-          10% {
+          12% {
             opacity: 0.95;
-            transform: translate(40px, 60px) rotate(14deg);
+            transform: translate(50px, 80px) rotate(12deg);
           }
-          25% {
-            transform: translate(140px, 100px) rotate(6deg);
+          28% {
+            transform: translate(160px, 140px) rotate(4deg);
           }
-          40% {
-            transform: translate(220px, 160px) rotate(-4deg);
+          45% {
+            transform: translate(245px, 205px) rotate(-6deg);
           }
-          50% {
-            transform: translate(270px, 218px) rotate(-18deg);
+          54% {
+            /* Smooth swooping arc past branch */
+            transform: translate(282px, 236px) rotate(-12deg);
           }
-          56% {
-            /* Touchdown on right branch */
-            transform: translate(282px, 238px) rotate(0deg);
+          64% {
+            transform: translate(315px, 215px) rotate(-18deg);
           }
-          /* Perched State (56% to 84%) */
-          60%, 68%, 76%, 84% {
-            transform: translate(282px, 238px) rotate(0deg);
-          }
-          64%, 80% {
-            transform: translate(282px, 236px) rotate(-2deg);
-          }
-          72% {
-            transform: translate(282px, 239px) rotate(1deg);
-          }
-          /* Take off */
-          87% {
-            transform: translate(290px, 225px) rotate(-22deg);
-          }
-          95% {
+          78% {
+            transform: translate(385px, 155px) rotate(-14deg);
             opacity: 0.95;
-            transform: translate(370px, 150px) rotate(-15deg);
           }
           100% {
-            transform: translate(460px, 80px) rotate(-12deg);
+            transform: translate(490px, 85px) rotate(-8deg);
             opacity: 0;
           }
         }
 
         @keyframes bird1Wings {
-          0%, 4%, 8%, 12%, 16%, 20%, 24%, 28%, 32%, 36%, 40%, 44%, 48% {
+          0%, 4%, 8%, 12%, 16%, 20%, 24%, 28%, 32%, 36%, 40%, 44%, 48%, 52%, 56%, 60%, 64%, 68%, 72%, 76%, 80%, 84%, 88%, 92%, 96% {
             transform: scaleY(-0.7) rotate(22deg);
           }
-          2%, 6%, 10%, 14%, 18%, 22%, 26%, 30%, 34%, 38%, 42%, 46%, 50% {
+          2%, 6%, 10%, 14%, 18%, 22%, 26%, 30%, 34%, 38%, 42%, 46%, 50%, 54%, 58%, 62%, 66%, 70%, 74%, 78%, 82%, 86%, 90%, 94%, 98% {
             transform: scaleY(0.9) rotate(-18deg);
           }
-          52%, 54% {
-            transform: scaleY(1.1) rotate(-35deg);
-          }
-          56%, 85% {
-            transform: scaleY(0.15) rotate(5deg) translateX(1px);
-          }
-          86%, 90%, 94%, 98% {
+          100% {
             transform: scaleY(-0.7) rotate(22deg);
-          }
-          88%, 92%, 96%, 100% {
-            transform: scaleY(0.9) rotate(-18deg);
           }
         }
 
         /* Reactive spring on right branch */
         @keyframes rightBranchSpring {
-          0%, 54% { transform: rotate(0deg); }
-          57% { transform: rotate(2.2deg) translateY(3px); }
-          62% { transform: rotate(-1.1deg) translateY(-1px); }
-          66% { transform: rotate(0.5deg) translateY(1px); }
-          70%, 85% { transform: rotate(0deg); }
-          88% { transform: rotate(-1.5deg) translateY(-2px); }
-          94%, 100% { transform: rotate(0deg); }
+          0%, 50% { transform: rotate(0deg); }
+          55% { transform: rotate(1.8deg) translateY(2px); }
+          60% { transform: rotate(-0.8deg) translateY(-1px); }
+          66%, 100% { transform: rotate(0deg); }
         }
 
-        /* ================= BIRD 2: SMALL SPARROW (LANDS ON LEFT BRANCH) ================= */
+        /* ================= BIRD 2: SMALL SPARROW (CONTINUOUS FLUID FLIGHT) ================= */
         @keyframes bird2SparrowFlight {
           0% {
-            transform: translate(440px, 110px) rotate(-20deg) scale(0.65);
+            transform: translate(450px, 90px) rotate(-18deg) scale(0.65);
             opacity: 0;
           }
-          12% {
+          15% {
             opacity: 0.9;
-            transform: translate(320px, 150px) rotate(-14deg) scale(0.65);
+            transform: translate(320px, 130px) rotate(-12deg) scale(0.65);
           }
-          28% {
-            transform: translate(210px, 210px) rotate(-6deg) scale(0.65);
+          35% {
+            transform: translate(200px, 195px) rotate(-5deg) scale(0.65);
           }
-          40% {
-            /* Landing on left perch at (104, 288) */
-            transform: translate(104px, 288px) rotate(0deg) scale(0.65);
+          52% {
+            transform: translate(105px, 275px) rotate(-15deg) scale(0.65);
           }
-          /* Perched on left branch */
-          44%, 52%, 60%, 68% {
-            transform: translate(104px, 288px) rotate(0deg) scale(0.65);
-          }
-          48%, 64% {
-            transform: translate(104px, 286px) rotate(-3deg) scale(0.65);
-          }
-          56% {
-            transform: translate(104px, 289px) rotate(2deg) scale(0.65);
-          }
-          /* Quick hop and takeoff */
-          72% {
-            transform: translate(95px, 275px) rotate(-25deg) scale(0.65);
-          }
-          84% {
-            transform: translate(20px, 210px) rotate(-18deg) scale(0.65);
+          68% {
+            transform: translate(40px, 230px) rotate(-18deg) scale(0.65);
             opacity: 0.9;
           }
           100% {
-            transform: translate(-50px, 140px) rotate(-15deg) scale(0.65);
+            transform: translate(-60px, 130px) rotate(-14deg) scale(0.65);
             opacity: 0;
           }
         }
 
         @keyframes bird2SparrowWings {
-          0%, 3%, 6%, 9%, 12%, 15%, 18%, 21%, 24%, 27%, 30%, 33%, 36% {
+          0%, 4%, 8%, 12%, 16%, 20%, 24%, 28%, 32%, 36%, 40%, 44%, 48%, 52%, 56%, 60%, 64%, 68%, 72%, 76%, 80%, 84%, 88%, 92%, 96% {
             transform: scaleY(-0.8) rotate(26deg);
           }
-          1.5%, 4.5%, 7.5%, 10.5%, 13.5%, 16.5%, 19.5%, 22.5%, 25.5%, 28.5%, 31.5%, 34.5% {
+          2%, 6%, 10%, 14%, 18%, 22%, 26%, 30%, 34%, 38%, 42%, 46%, 50%, 54%, 58%, 62%, 66%, 70%, 74%, 78%, 82%, 86%, 90%, 94%, 98% {
             transform: scaleY(0.9) rotate(-22deg);
           }
-          /* Perched folded */
-          40%, 70% {
-            transform: scaleY(0.12) rotate(4deg);
-          }
-          /* Fluttering off */
-          72%, 75%, 78%, 81%, 84%, 87%, 90%, 93%, 96%, 99% {
+          100% {
             transform: scaleY(-0.8) rotate(26deg);
-          }
-          73.5%, 76.5%, 79.5%, 82.5%, 85.5%, 88.5%, 91.5%, 94.5%, 97.5% {
-            transform: scaleY(0.9) rotate(-22deg);
           }
         }
 
@@ -195,30 +146,28 @@ const HeroBirdsTreeAnimation = ({ className = "", cowSurprised = false }) => {
         /* ================= BIRD 4: TINY HOVERING HUMMINGBIRD ================= */
         @keyframes hummingbirdHover {
           0% {
-            transform: translate(380px, 160px) rotate(-15deg) scale(0.48);
+            transform: translate(400px, 140px) rotate(-15deg) scale(0.48);
             opacity: 0;
           }
           15% {
-            opacity: 0.8;
-            transform: translate(250px, 175px) rotate(-5deg) scale(0.48);
+            opacity: 0.85;
+            transform: translate(270px, 165px) rotate(-8deg) scale(0.48);
           }
-          /* Hovering near canopy leaves at (175, 170) */
-          30%, 40%, 50%, 60% {
-            transform: translate(175px, 170px) rotate(5deg) scale(0.48);
-          }
-          35%, 55% {
-            transform: translate(173px, 167px) rotate(8deg) scale(0.48);
+          30% {
+            transform: translate(210px, 185px) rotate(6deg) scale(0.48);
           }
           45% {
-            transform: translate(177px, 173px) rotate(2deg) scale(0.48);
+            transform: translate(165px, 155px) rotate(-12deg) scale(0.48);
           }
-          /* Rapid dart away */
+          60% {
+            transform: translate(185px, 135px) rotate(14deg) scale(0.48);
+          }
           75% {
-            transform: translate(90px, 110px) rotate(-25deg) scale(0.48);
-            opacity: 0.8;
+            transform: translate(110px, 100px) rotate(-22deg) scale(0.48);
+            opacity: 0.85;
           }
           100% {
-            transform: translate(-30px, 60px) rotate(-30deg) scale(0.45);
+            transform: translate(-40px, 45px) rotate(-28deg) scale(0.45);
             opacity: 0;
           }
         }
