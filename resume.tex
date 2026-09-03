@@ -1,0 +1,120 @@
+\documentclass[a4paper,9.5pt]{article}
+
+% ---- PACKAGES ----
+\usepackage[left=0.5in,right=0.5in,top=0.42in,bottom=0.42in]{geometry}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage[T1]{fontenc}
+
+% ---- FORMATTING ----
+\definecolor{headcolor}{RGB}{0,70,127}
+\titleformat{\section}{\large\bfseries\color{headcolor}}{}{0em}{}[\color{headcolor}\titlerule]
+\titlespacing*{\section}{0pt}{4pt}{3pt}
+\setlist[itemize]{noitemsep, topsep=0pt, leftmargin=1.2em, parsep=0pt}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+% =========================================
+% HEADER
+% =========================================
+\begin{center}
+    {\LARGE \textbf{\color{headcolor}GANDREDDY LOKESH}} \\[4pt]
+    \small
+    \href{tel:+916300272531}{+91 63002 72531}
+    \quad\textbar\quad
+    \href{mailto:lokeshgandreddy81@gmail.com}{lokeshgandreddy81@gmail.com}
+    \quad\textbar\quad
+    \href{https://linkedin.com/in/lokeshh-hhh}{linkedin.com/in/lokeshh-hhh}
+    \quad\textbar\quad
+    \href{https://github.com/Lokeshgandreddy81}{github.com/Lokeshgandreddy81}
+    \quad\textbar\quad
+    \href{https://vidyalaya-eight.vercel.app}{vidyalaya-eight.vercel.app}
+\end{center}
+
+% =========================================
+% SUMMARY
+% =========================================
+\section*{SUMMARY}
+Full-Stack \& Backend Engineer (B.Tech CSE '26, CGPA 8.75/10) with hands-on experience architecting production-grade AI applications and distributed microservices using \textbf{Node.js, Express.js, TypeScript, Python, MongoDB Atlas, and Docker}. Proven track record designing end-to-end RAG pipelines, low-latency streaming APIs (SSE), and scalable authentication systems. Targeting backend/SWE roles focused on distributed systems, clean API design, and cloud deployments.
+
+% =========================================
+% EDUCATION
+% =========================================
+\section*{EDUCATION}
+\textbf{B.Tech in Computer Science Engineering} \hfill \textit{2022 - 2026}\\
+Mohan Babu University, Tirupati, Andhra Pradesh \hfill \textbf{CGPA: 8.75 / 10.0}
+
+\smallskip
+\noindent\textbf{Intermediate -- MPC} \hfill \textit{2020 -- 2022}\\
+Narayana Junior College, Visakhapatnam \hfill \textbf{88.9\%}
+
+% =========================================
+% TECHNICAL SKILLS
+% =========================================
+\section*{TECHNICAL SKILLS}
+\begin{tabular}{@{}p{2.8cm} p{14cm}}
+\textbf{Languages} & TypeScript, JavaScript (ES6+), Python, Java, SQL, HTML5, CSS3 \\[1pt]
+\textbf{Backend}   & Node.js, Express.js, FastAPI, RESTful APIs, Server-Sent Events (SSE), WebSockets \\[1pt]
+\textbf{Frontend}  & React 19, Vite, Tailwind CSS, Framer Motion, Radix UI \\[1pt]
+\textbf{Databases} & MongoDB Atlas (MQL, Mongoose ODM), Vector Search, Redis, PostgreSQL, SQLite \\[1pt]
+\textbf{AI \& Systems} & RAG (Retrieval-Augmented Generation), Gemini GenAI SDK, Vector Embeddings \\[1pt]
+\textbf{DevOps \& Cloud} & Docker, Render, Vercel, GitHub Actions (CI/CD), AWS (EC2, S3) \\[1pt]
+\textbf{Concepts}  & System Design, Data Structures \& Algorithms, OOP Principles, JWT Authentication \\[1pt]
+\textbf{Tools}     & Git, GitHub, Postman, VS Code, Antigravity
+\end{tabular}
+
+% =========================================
+% PROJECTS
+% =========================================
+\section*{PROJECTS}
+
+% --- Project 1: Cortex ---
+\textbf{Cortex -- Autonomous AI Learning Ecosystem} \hfill
+\href{https://vidyalaya-eight.vercel.app}{Live Demo} $\cdot$
+\href{https://github.com/Lokeshgandreddy81/Vidhyalaya}{Source}\\
+\textit{React 19 $\cdot$ TypeScript $\cdot$ Node.js $\cdot$ Express $\cdot$ MongoDB Atlas $\cdot$ Gemini AI $\cdot$ Docker $\cdot$ Vercel $\cdot$ Render}
+\begin{itemize}
+    \item Architected an adaptive orchestration engine converting unstructured documents into hierarchical academic roadmaps and interactive neural concept maps using \textbf{Google Gemini 2.5/Flash}.
+    \item Built an end-to-end \textbf{RAG (Retrieval-Augmented Generation) pipeline} leveraging in-process PDF chunking and \textbf{3072-dimensional vector embeddings} with MongoDB Vector Search for high-accuracy curriculum grounding.
+    \item Engineered an asynchronous streaming architecture (\textbf{Server-Sent Events}) for low-latency interactive AI tutoring, supporting active recall, dynamic code sandboxes (7 languages), and concept visualization.
+    \item Implemented robust multi-tenant authentication featuring role-based access control (\textbf{RBAC}) for university admins/students, automated session recovery, and 1-click ephemeral sandbox isolation.
+    \item Containerized microservices using \textbf{Docker} deployed on Render, orchestrated SPA delivery via Vercel with automatic rewrites, and enforced strict type safety (\textbf{zero TypeScript warnings}).
+\end{itemize}
+
+% --- Project 2: HireCircle ---
+\textbf{HireCircle -- AI-Powered Blue-Collar Hiring Platform} \hfill
+\href{https://github.com/Lokeshgandreddy81/HireCircle}{Source}\\
+\textit{React 19 $\cdot$ TypeScript $\cdot$ Vite $\cdot$ Tailwind CSS $\cdot$ Gemini GenAI SDK $\cdot$ MediaDevices API}
+\begin{itemize}
+    \item Built a mobile-first hiring platform with dual-role authentication (Job Seeker / Employer), supporting phone and email login flows with role-specific theming across \textbf{3,100+ lines of TypeScript}.
+    \item Integrated \textbf{Google Gemini 3 (Pro \& Flash)} via the GenAI SDK for AI-powered video interviews that extract structured profiles (skills, experience, qualifications) using \textbf{JSON schema-constrained generation}.
+    \item Engineered a \textbf{5-module tab architecture} (Connect feed, Profiles, Applications, Jobs, Settings) with stack-based navigation, full-screen chat interfaces, and AI-generated smart reply suggestions.
+    \item Implemented a social hiring layer (Connect tab) featuring community feeds with voice/photo posts, a \textbf{karma-based vouch system}, industry Circles with rate boards, an Academy with video courses, and referral Bounties.
+    \item Designed real-time application tracking with a \textbf{6-stage pipeline} (Applied $\rightarrow$ Viewed $\rightarrow$ Shortlisted $\rightarrow$ Interview $\rightarrow$ Offer $\rightarrow$ Rejected) and AI-powered candidate-job match scoring with Gemini-generated explanations.
+\end{itemize}
+
+% --- Project 3: CalcVerse ---
+\textbf{CalcVerse -- All-in-One Modular Calculator Platform} \hfill
+\href{https://calcverse.onrender.com}{Live Demo} $\cdot$
+\href{https://github.com/Lokeshgandreddy81/Vidhyalaya}{Source}\\
+\textit{Node.js $\cdot$ Express.js $\cdot$ REST API $\cdot$ Docker $\cdot$ Render}
+\begin{itemize}
+    \item Engineered a modular backend using \textbf{Node.js/Express} with 15+ REST endpoints, achieving \textbf{200ms avg response time} and \textbf{35\% latency reduction} via request optimization and response caching.
+    \item Designed a \textbf{plugin-style computation engine} decoupling each calculation module for independent scaling, unit testing, and maintenance.
+    \item Wrote comprehensive test suites for edge cases and boundary conditions; containerized with \textbf{Docker} and deployed on Render with environment-based configuration management.
+\end{itemize}
+
+% =========================================
+% ACHIEVEMENTS & IMPACT
+% =========================================
+\section*{ACHIEVEMENTS, DSA \& IMPACT}
+\begin{itemize}
+    \item \textbf{Data Structures \& Algorithms:} Solved \textbf{150+ LeetCode problems} across Arrays, Hash Maps, Binary Search, Two Pointers, Stacks, Queues, Sliding Window ; applied Big-O time-space complexity optimization.
+\end{itemize}
+
+\end{document}
